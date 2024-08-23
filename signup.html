@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(./img/img1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 192px auto;
+  width: 350px;
+  color: white;
+  border-radius: 10px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+button {
+  background-color: #008CBA;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+a{
+    color: antiquewhite;
+    text-decoration: none;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Create new Account</h2>
+  <p> Already Registered? <a href="login.html"> Log in here. </a></p>
+  <form>
+    <label for="name">NAME</label>
+    <input type="text" id="name" name="name" placeholder="Your Name">
+
+    <label for="email">EMAIL</label>
+    <input type="text" id="email" name="email" placeholder="Your Email">
+
+    <label for="password">PASSWORD</label>
+    <input type="password" id="password" name="password" placeholder="Your Password">
+
+    <button class="button" type="button" onclick="window.location.href = 'index.html';" >Sign up</button>
+  </form>
+</div>
+
+</body>
+</html>
