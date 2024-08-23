@@ -25,28 +25,41 @@ body{
   background-attachment: fixed;
 
 }
-.btn{
-border: 3px solid rgb(255, 255, 255);
-border-radius: 10px;
-background-color: rgba(0, 0, 0, 0.5);
-color: rgb(255, 255, 255);
-height:20px ;
-width: 80px;
+ .button{
 
-      padding: 41px 167px;
-        margin:32px 60px;
+
+
         font-size: 1.5rem;
        
         cursor:pointer;
-        box-shadow: 5px 3px 28px 5px;
         text-decoration: none;
         align-content: center;
         display: block;
+ 
+        color: rgb(255, 255, 255);
+        box-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 60px #000;
+      }
+
+button {
+  background-color: #005a1aac;
+  color: white;
+  padding: 22px 20px;
+  margin: 72px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 5px;
 }
+
+button:hover {
+  opacity: 1;
+}
+
 .main{
     color: rgb(255, 255, 255);
     padding: 1px 150px;
-    margin: 82px 10px;
+    margin: -10px 10px;
 display: block;
 align-content: center;
 
@@ -56,10 +69,11 @@ align-content: center;
 .container {
   background-color: rgba(43, 112, 0, 0.2);
   padding: 20px;
-  margin: 192px auto;
+  margin: 100px auto;
   width: 450px;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 10px;
+  border: 3px solid green;
 }
 .msg{
  overflow: hidden;
@@ -112,10 +126,10 @@ font-size: 3.2rem;
        
      
             <!-- <a href="#">Login</a> -->
-            <button class="btn" type="button" onclick="window.location.href = 'login.html';" >Login</button>
+            <button class="button" type="button" onclick="window.location.href = 'login.html';" >Login</button>
             <!-- <input class="btn" type="button" onclick="window.location.href = 'login.html';" value="Login"/> -->
        
-          <button class="btn" type="button" onclick="window.location.href = 'signup.html';" >Signup</button>
+          <button class="button" type="button" onclick="window.location.href = 'signup.html';" >Signup</button>
           
             
       
