@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <style>
 /* *{
@@ -50,35 +54,72 @@ align-content: center;
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(43, 112, 0, 0.2);
   padding: 20px;
   margin: 192px auto;
   width: 450px;
   color: white;
   border-radius: 10px;
 }
+.msg{
+ overflow: hidden;
+  color: white;
+  padding: 20px 40px;
+margin: 110px 2px;
+margin-top: 130px;
+/* background-color: black; */
+display: block;
+box-sizing: border-box;
+text-align: center;
+/* font-weight: 700; */
+
+ border-right:  solid rgb(255, 255, 255);
+ white-space: nowrap; 
+animation: typing 5s steps(100, end);
+}
+
+@keyframes typing{
+from{width: 0%;}
+to{width: 100%;}
+}
+
+h1{
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 60px #000;
+font-size: 3.2rem;
+}
+.msg p{
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Anonymous Pro", monospace;
+}
 </style>
 <body>
+
+  <div class="msg">
+    <div class="text-cover"></div>
+    <p> 
+      Empowering plant health using AI is to optimize plant growth, detect diseases, and predict nutrient
+       deficiencies........
+    </p>
+  </div>
     <div class="container">
         <div class="main">
            <h1>Welcome</h1>
            <p>Let's cure the plant</p>
 
         </div >
-        <div >
+       
      
             <!-- <a href="#">Login</a> -->
             <button class="btn" type="button" onclick="window.location.href = 'login.html';" >Login</button>
             <!-- <input class="btn" type="button" onclick="window.location.href = 'login.html';" value="Login"/> -->
        
-        </div>
-        <div>
-        
           <button class="btn" type="button" onclick="window.location.href = 'signup.html';" >Signup</button>
           
             
       
-        </div>
+        
     </div>
 </body>
 </html>
