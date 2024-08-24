@@ -63,6 +63,121 @@ a{
     text-decoration: none;
     text-align: center;
 }
+
+
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 500px;
+  left: 50%;
+  margin-left: -240px;
+  height: 450px;
+  top: 50%;
+  margin-top: -200px;
+  background: #FFF;
+  border: 3px solid #006d19;
+  z-index: 20;
+  
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+  background-image: url(./images/img1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.popup h3{
+  color: #7ac142;
+  text-align: center;
+}
+
+.popup p{
+  text-align: center;
+}
+
+
+
+.popup button {
+  background-color: #005a1aac;
+  color: white;
+  padding: 14px 20px;
+  margin: 26px 44px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+.popup  classbutton:hover {
+  opacity: 1;
+}
+
+.wrapper{
+  height:16vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:#ffffff}
+  
+.checkmark__circle{
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards}
+
+.checkmark{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both}
+  .checkmark__check{
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards}
+  
+  @keyframes stroke{
+    100%{stroke-dashoffset: 0}
+  }
+  @keyframes scale{
+    0%, 100%{transform: none}50%{transform: scale3d(1.1, 1.1, 1)}
+  }
+  @keyframes fill{100%{box-shadow: inset 0px 0px 0px 30px #7ac142}}
+
+
 </style>
 </head>
 <body>
@@ -72,17 +187,62 @@ a{
   <p> Already Registered? <a href="login.html"> Log in here. </a></p>
   <form>
     <label for="name">NAME</label>
-    <input type="text" id="name" name="name" placeholder="Your Name">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
 
     <label for="email">EMAIL</label>
-    <input type="text" id="email" name="email" placeholder="Your Email">
+    <input type="text" id="email" name="email" placeholder="Your Email" required>
 
     <label for="password">PASSWORD</label>
-    <input type="password" id="password" name="password" placeholder="Your Password">
+    <input type="password" id="password" name="password" placeholder="Your Password" required>
 
-    <button class="button" type="button" onclick="window.location.href = '#';" >Sign up</button>
+    <button class="button" type="button" onclick="show('popup')">Sign up</button>
   </form>
 </div>
+
+
+
+<div class="popup" id="popup">
+  <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+  </svg>
+  </div>
+    <h3>
+      Thank you !!! <br> Your account has been created successfully...
+    </h3>
+
+    <br><br>
+    <p>
+      Please check your inbox a verification link is sent on your registered email
+
+    </p>
+<p>
+  now you can log in by clicking here on log in button
+</p>
+  <!-- <a href="#" onclick="hide('popup')">Close</a> -->
+
+  <button class="button" type="button" onclick="hide('popup')" >Close</button>
+  <button class="button" type="button" onclick="window.location.href = 'login.html';" >Log in</button>
+</div>
+
+
+<script>
+  $ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+	$(id).style.display ='block';
+}
+var hide = function(id) {
+	$(id).style.display ='none';
+}
+
+
+
+
+
+
+
+</script>
 
 </body>
 </html>
